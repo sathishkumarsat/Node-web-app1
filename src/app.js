@@ -5,6 +5,7 @@ const path = require('path');
 const hbs = require('hbs');
 
 const app = express();
+const port = process.env.PORT || 3000; //For heroku server port
 
 const publicPathDirectory = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
@@ -128,6 +129,6 @@ app.get('/*', (req, res) => { //Wild card routes
 });
 
 
-app.listen('2000', () => {
-    console.log('Server started');
+app.listen(port, () => {
+    console.log('Server started at' + port);
 });
