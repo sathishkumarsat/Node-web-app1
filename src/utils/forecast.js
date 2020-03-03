@@ -14,7 +14,7 @@ const forecast = (coordinates, callback) => {
         else {
             //console.log('The place_name is: ' + response.body.timezone);
             //console.log('The temperature is: ' + response.body.currently.temperature);
-            callback(undefined, 'The place_name is: ' + response.body.timezone + ', The temperature is: ' + response.body.currently.temperature);
+            callback(undefined, 'The place_name is: ' + response.body.timezone + ', The temperature is: ' + response.body.currently.temperature + 'with high as ' + response.body.currently.temperatureHigh + 'with low as ' + response.body.currently.temperatureLow);
         }
     });
 };

@@ -130,5 +130,5 @@ app.get('/*', (req, res) => { //Wild card routes
 
 
 app.listen(port, () => {
-    console.log('Server started at' + port);
+    console.log('Server started at ' + port);
 });
